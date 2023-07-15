@@ -11,11 +11,12 @@ function getComputerChoice (dict) {
     // Generate a random index within the range of available keys
     const randomIndex = Math.floor(Math.random() * keys.length);
 
+    // Log the computer's choice
+    console.log(keys[randomIndex])
+
     // Return the key at the random index
     return keys[randomIndex];
 }
-
-console.log(getComputerChoice(dict))
 
 
 function capitalize(str) {
@@ -34,5 +35,18 @@ function playRound (playerSelection, computerSelection) {
     } else {
         return "It's a tie!";
     }
-    
+}
+
+function game() {
+    playerScore = 0;
+    computerScore = 0;
+
+    roundNum = 5;
+    roundCurr = 1;
+    while (roundCurr <= roundNum) {
+        playerSelection = prompt("Enter one of the following: Rock, Paper, or Scissors")
+        computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection))
+        roundCurr++;
+    }
 }
