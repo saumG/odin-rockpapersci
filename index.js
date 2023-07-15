@@ -46,7 +46,14 @@ function game() {
     while (roundCurr <= roundNum) {
         playerSelection = prompt("Enter one of the following: Rock, Paper, or Scissors")
         computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection))
+        result = playRound(playerSelection, computerSelection)
+        console.log(result);
+        roundWinner = winner(result);
+        if (roundWinner === "player") {
+            playerScore++;
+        } else if (roundWinner === "computer") {
+            computerScore++;
+        }
         roundCurr++;
     }
 }
