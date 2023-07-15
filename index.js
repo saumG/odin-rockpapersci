@@ -68,5 +68,4 @@ function winner (str) {
     }
 }
 
-
 game()
