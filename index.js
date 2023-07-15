@@ -15,4 +15,4 @@ function getComputerChoice (dict) {
     return keys[randomIndex];
 }
 
-getComputerChoice(dict)
+console.log(getComputerChoice(dict))
