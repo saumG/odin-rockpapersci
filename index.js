@@ -4,7 +4,7 @@ let dict = {
     "Scissors":"Paper"
 };
 
-function getComputerChoice (dict) {
+function getComputerChoice () {
     // Extract all keys from the dictionary object
     const keys = Object.keys(dict);
 
@@ -15,7 +15,7 @@ function getComputerChoice (dict) {
     console.log(keys[randomIndex])
 
     // Return the key at the random index
-    return keys[randomIndex];
+    return keys[randomIndex]; 
 }
 
 
@@ -50,3 +50,14 @@ function game() {
         roundCurr++;
     }
 }
+
+function winner (str) {
+    if (str.includes("Win")){
+        return "player"
+    }else if (str.includes("Lose")){
+        return "computer"
+    }
+}
+
+
+game()
