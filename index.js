@@ -56,6 +56,8 @@ function game() {
         }
         roundCurr++;
     }
+
+    console.log(playerScore + " : " +computerScore)
 }
 
 function winner (str) {
