@@ -50,7 +50,7 @@ function game() {
     roundCurr = 1;
 
     
-    while (roundCurr <= roundNum) {
+    while (playerScore < 5 && computerScore < 5) {
         // Prompt the player to enter their choice (Rock, Paper, or Scissors)
         playerSelection = prompt("Enter one of the following: Rock, Paper, or Scissors")
         // Generate the computer's choice
