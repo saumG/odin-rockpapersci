@@ -1,0 +1,12 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.game-story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

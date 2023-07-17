@@ -85,5 +85,5 @@ function winnerRound (str) {
     }
 }
 
-// Start the game
-game()
+// // Start the game
+// game()
