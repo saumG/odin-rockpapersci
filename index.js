@@ -46,7 +46,7 @@ function game() {
     computerScore = 0;
 
     // Set the total number of rounds to be played
-    roundNum = 5;
+    roundNum = 1;
     roundCurr = 1;
 
     
