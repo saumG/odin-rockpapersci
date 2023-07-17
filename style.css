@@ -7,13 +7,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    text-align: center;
+    padding: 12px;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 .game-story {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 12px;
 }
 
 .start {
@@ -25,6 +29,17 @@ body {
 
 .start button {
     padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: white;
+}
+
+.prompt-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-size: 18px;
 }
 
 .rps-options {
@@ -35,15 +50,25 @@ body {
 }
 
 .rps-options > button {
-    height: 100px;
-    width: 150px;
+    height: 50px;
+    width: 100px;
     margin: 24px 24px;
+}
+
+.round-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .scores {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 12px;
 }
 
 .scores > .player,
@@ -71,6 +96,15 @@ img {
     color: red;
 }
 
+.winner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    font-size: 36px;
+    font-weight: 500;
+
+}
 
 * {
     border: 1px solid red;

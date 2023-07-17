@@ -1,8 +1,17 @@
+//Game
 let dict = {
     "Rock":"Scissors",
     "Paper":"Rock",
     "Scissors":"Paper"
 };
+
+let playerScore = 0;
+let computerScore = 0;
+let roundWinner = '';
+
+function isGameOver() {
+    return playerScore === 5 || computerScore === 5
+}
 
 function getComputerChoice () {
     // Extract all keys from the dictionary object
@@ -30,23 +39,20 @@ function playRound (playerSelection, computerSelection) {
 
     // Check the dict to see who won, key value pair where key beats value
     if (dict[playerSelection] === computerSelection) {
-        return `You Win! ${playerSelection} beats ${computerSelection}`;
+        roundWinner = 'player'
     } else if (dict[computerSelection] === playerSelection) {
-        return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        roundWinner = 'computer'
     } else {
-        return "It's a tie!";
+        roundWinner = 'tie'
     }
+
+    updateScoreMessage(roundWinner, playerSelection, computerSelection)
 }
 
 function game() {
     // Initialize the player and computer score to 0
     playerScore = 0;
     computerScore = 0;
-
-    // Set the total number of rounds to be played
-    roundNum = 1;
-    roundCurr = 1;
-
     
     while (playerScore < 5 && computerScore < 5) {
         // Prompt the player to enter their choice (Rock, Paper, or Scissors)
@@ -65,25 +71,16 @@ function game() {
         } else if (roundWinner === "computer") {
             computerScore++;
         }
-        // Increment the current round number
-        roundCurr++;
     }
+
+
 
     // Log the final scores to the console
     console.log(playerScore + " : " + computerScore)
 }
 
-function winnerRound (str) {
-    // Check if the result string includes "Win"
-    if (str.includes("Win")){
-        // If it does, return "player" as the winner
-        return "player"
-    // Check if the result string includes "Lose"
-    } else if (str.includes("Lose")){
-        // If it does, return "computer" as the winner
-        return "computer"
-    }
-}
+
 
 // // Start the game
 // game()
+
