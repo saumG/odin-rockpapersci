@@ -60,7 +60,7 @@ function game() {
         // Log the result to the console
         console.log(result);
         // Determine the round winner
-        roundWinner = winner(result);
+        roundWinner = winnerRound(result);
         // Increment the score of the corresponding winner
         if (roundWinner === "player") {
             playerScore++;
@@ -76,7 +76,7 @@ function game() {
 }
 
 
-function winner (str) {
+function winnerRound (str) {
     // Check if the result string includes "Win"
     if (str.includes("Win")){
         // If it does, return "player" as the winner
