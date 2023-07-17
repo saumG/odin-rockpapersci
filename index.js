@@ -18,12 +18,10 @@ function getComputerChoice () {
     return keys[randomIndex]; 
 }
 
-
 function capitalize(str) {
     // Returns the string with the first letter capitalized
     return str[0].toUpperCase() + str.substring(1)
 }
-
 
 function playRound (playerSelection, computerSelection) {
     //Change the player and computer selection to only have their first letter capitalized
@@ -74,7 +72,6 @@ function game() {
     // Log the final scores to the console
     console.log(playerScore + " : " + computerScore)
 }
-
 
 function winnerRound (str) {
     // Check if the result string includes "Win"
