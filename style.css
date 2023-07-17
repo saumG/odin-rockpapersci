@@ -40,6 +40,38 @@ body {
     margin: 24px 24px;
 }
 
+.scores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scores > .player,
+.scores > .computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.player > .score {
+    color: blue;
+}
+.computer > .score {
+    color: red;
+}
+
+
 * {
     border: 1px solid red;
 }
