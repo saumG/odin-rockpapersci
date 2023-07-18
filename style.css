@@ -116,6 +116,8 @@ body {
 .score {
     font-size: 18px;
     font-weight: 900;
+    display: flex;
+    gap: 4px;
 }
 
 .footer {

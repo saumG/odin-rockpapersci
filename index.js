@@ -50,7 +50,14 @@ function playRound (playerSelection, computerSelection) {
 }
 
 //UI
-const roundResults = document.querySelector('.round-results')
+const roundResults = document.querySelector('.round-results');
+const roundResultsDesc = document.querySelector('.round-results-desc');
+const playerChoice = document.querySelector('.player > .choice');
+const computerChoice = document.querySelector('.computer > .choice');
+const rockButton = document.getElementById('rock');
+const paperButton = document.getElementById('paper');
+const scissorsButton = document.getElementById('scissors');
+
 
 function handleClick(playerSelection){
 
