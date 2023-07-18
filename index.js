@@ -71,6 +71,11 @@ const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
 
+const endScreen = document.querySelector('.end-screen');
+const endMessage = document.querySelector('.end-message');
+const restartButton = document.querySelector('.restart');
+const overlay = document.querySelector('.overlay');
+
 // OLD, tedious way of listening to events
 // rockButton.addEventListener('click', () => handleClick('Rock'));
 // paperButton.addEventListener('click', () => handleClick('Paper'));
@@ -118,7 +123,7 @@ function updateRoundResult() {
         roundResults.textContent = "You Win!";
     } else if (roundWinner === 'computer') {
         roundResults.textContent = "Alien Wins!";
-    } else {
+    } else if (roundWinner === 'tie'){
         roundResults.textContent = "It's a tie!";
     }
 
@@ -143,6 +148,13 @@ function openEndScreen(){
 }
 
 function restartGame() {
+    playerScore = 0;
+    computerScore = 0;
+    roundResults.textContent = "Time to Fight...";
+    roundResultsDesc.textContent = "First to 5 Wins!";
+    updateRoundResult(); // updates scores to 0-0
+    playerChoice.textContent = "?";
+    computerChoice.textContent = "?";
     
 }
 
