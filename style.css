@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-.title {
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +55,8 @@ body {
     margin: 24px 24px;
 }
 
-.round-results {
+.round-results,
+.round-results-desc {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,11 +80,6 @@ body {
     justify-content: center;
 }
 
-img {
-    height: 100px;
-    width: 100px;
-}
-
 .score {
     font-size: 24px;
     font-weight: 900;
@@ -94,16 +90,6 @@ img {
 }
 .computer > .score {
     color: red;
-}
-
-.winner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    font-size: 36px;
-    font-weight: 500;
-
 }
 
 * {

@@ -49,38 +49,24 @@ function playRound (playerSelection, computerSelection) {
     updateScoreMessage(roundWinner, playerSelection, computerSelection)
 }
 
-function game() {
-    // Initialize the player and computer score to 0
-    playerScore = 0;
-    computerScore = 0;
-    
-    while (playerScore < 5 && computerScore < 5) {
-        // Prompt the player to enter their choice (Rock, Paper, or Scissors)
-        playerSelection = prompt("Enter one of the following: Rock, Paper, or Scissors")
-        // Generate the computer's choice
-        computerSelection = getComputerChoice();
-        // Determine the result of the round
-        result = playRound(playerSelection, computerSelection)
-        // Log the result to the console
-        console.log(result);
-        // Determine the round winner
-        roundWinner = winnerRound(result);
-        // Increment the score of the corresponding winner
-        if (roundWinner === "player") {
-            playerScore++;
-        } else if (roundWinner === "computer") {
-            computerScore++;
-        }
-    }
+//UI
 
+function handleClick(playerSelection){
 
-
-    // Log the final scores to the console
-    console.log(playerScore + " : " + computerScore)
 }
 
+function updateChoices(playerSelection, computerSelection){
 
+}
 
-// // Start the game
-// game()
+function updateScore() {
 
+}
+
+function updateScoreMessage(roundWinner, playerSelection, computerSelection) {
+
+}
+
+function restartGame() {
+    
+}
