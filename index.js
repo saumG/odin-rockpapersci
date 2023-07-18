@@ -50,6 +50,7 @@ function playRound (playerSelection, computerSelection) {
 }
 
 //UI
+const roundResults = document.querySelector('.round-results')
 
 function handleClick(playerSelection){
 
