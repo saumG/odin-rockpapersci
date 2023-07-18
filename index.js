@@ -106,11 +106,11 @@ function updateRoundResult() {
 
 function updateRoundResultDesc(roundWinner, playerSelection, computerSelection) {
     if (roundWinner === 'player') {
-        roundResultsDesc.textContent = '${playerSelection} destroys ${computerSelection}';
+        roundResultsDesc.textContent = `${playerSelection} destroys ${computerSelection}`;
     } else if (roundWinner === 'computer') {
-        roundResultsDesc.textContent = '${playerSelection} gets destroyed by ${computerSelection}';
+        roundResultsDesc.textContent = `${playerSelection} gets destroyed by ${computerSelection}`;
     }else {
-        roundResultsDesc.textContent = '${playerSelection} ties with ${computerSelection}';
+        roundResultsDesc.textContent = `${playerSelection} ties with ${computerSelection}`;
     }
     return 
 }

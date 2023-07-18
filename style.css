@@ -132,6 +132,19 @@ body {
     color: #e5e7eb;
 }
 
+.square-button {
+    border-radius: 10px;
+    background-color: var(--secondary-dark);
+}
+
+.square-button:hover {
+    background-color: var(--secondary-dark-hover);
+}
+
+.square-button:active {
+    background-color: var(--secondary-dark-active);
+}
+
 * {
     border: 1px solid red;
 }
