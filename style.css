@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 12px;
+    padding: 20px;
     font-size: 36px;
     font-weight: 700;
     color: rgb(250,198,80);
@@ -23,6 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 12px;
     color: rgb(250,198,80);
     background-color: #131b23;
@@ -89,8 +90,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
-
 }
 .choice {
     display: flex;
