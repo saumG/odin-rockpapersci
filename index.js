@@ -52,7 +52,7 @@ function playRound (playerSelection, computerSelection) {
         roundWinner = 'tie'
     }
 
-    updateScoreMessage(roundWinner, playerSelection, computerSelection)
+    updateRoundResultDesc(roundWinner, playerSelection, computerSelection)
 }
 
 //UI
@@ -79,7 +79,7 @@ function handleClick(playerSelection){
     const computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
     updateChoices(playerSelection, computerSelection);
-    updateScore();
+    updateRoundResult();
 
 }
 
@@ -88,11 +88,20 @@ function updateChoices(playerSelection, computerSelection){
     computerChoice.textContent = rpsEmoji[computerSelection];
 }
 
-function updateScore() {
+function updateRoundResult() {
+    if (roundWinner === 'player') {
+        roundResults.textContent = "You Win!";
+    } else if (roundWinner === 'computer') {
+        roundResults.textContent = "Alien Wins!";
+    } else {
+        roundResults.textContent = "It's a tie!";
+    }
 
+    playerScoreElement.textContent = playerScore.toString();
+    computerScoreElement.textContent = computerScore.toString();
 }
 
-function updateScoreMessage(roundWinner, playerSelection, computerSelection) {
+function updateRoundResultDesc(roundWinner, playerSelection, computerSelection) {
 
 }
 
