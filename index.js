@@ -1,9 +1,15 @@
 //Game
-let dict = {
+let winDecide = {
     "Rock":"Scissors",
     "Paper":"Rock",
     "Scissors":"Paper"
 };
+
+let rpsEmoji = {
+    "Rock":"✊",
+    "Paper":"🖐️",
+    "Scissors":"✌️"
+}
 
 let playerScore = 0;
 let computerScore = 0;
@@ -15,7 +21,7 @@ function isGameOver() {
 
 function getComputerChoice () {
     // Extract all keys from the dictionary object
-    const keys = Object.keys(dict);
+    const keys = Object.keys(winDecide);
 
     // Generate a random index within the range of available keys
     const randomIndex = Math.floor(Math.random() * keys.length);
@@ -38,9 +44,9 @@ function playRound (playerSelection, computerSelection) {
     computerSelection = capitalize(computerSelection.toLowerCase());
 
     // Check the dict to see who won, key value pair where key beats value
-    if (dict[playerSelection] === computerSelection) {
+    if (winDecide[playerSelection] === computerSelection) {
         roundWinner = 'player'
-    } else if (dict[computerSelection] === playerSelection) {
+    } else if (winDecide[computerSelection] === playerSelection) {
         roundWinner = 'computer'
     } else {
         roundWinner = 'tie'
@@ -70,6 +76,10 @@ function handleClick(playerSelection){
         return
     }
 
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    updateChoices(playerSelection, computerSelection);
+    updateScore();
 
 }
 
