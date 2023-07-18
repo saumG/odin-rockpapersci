@@ -58,10 +58,13 @@ function playRound (playerSelection, computerSelection) {
 //UI
 const roundResults = document.querySelector('.round-results');
 const roundResultsDesc = document.querySelector('.round-results-desc');
+
 const playerChoice = document.querySelector('.player > .choice');
 const computerChoice = document.querySelector('.computer > .choice');
+
 const playerScoreElement = document.getElementById('player-score');
 const computerScoreElement = document.getElementById('computer-score');
+
 const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
@@ -102,7 +105,14 @@ function updateRoundResult() {
 }
 
 function updateRoundResultDesc(roundWinner, playerSelection, computerSelection) {
-
+    if (roundWinner === 'player') {
+        roundResultsDesc.textContent = '${playerSelection} destroys ${computerSelection}';
+    } else if (roundWinner === 'computer') {
+        roundResultsDesc.textContent = '${playerSelection} gets destroyed by ${computerSelection}';
+    }else {
+        roundResultsDesc.textContent = '${playerSelection} ties with ${computerSelection}';
+    }
+    return 
 }
 
 function restartGame() {
