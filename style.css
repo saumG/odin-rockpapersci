@@ -140,6 +140,39 @@ body {
     background-color: var(--secondary-dark-active);
 }
 
+
+/* End Screen */
+.end-screen {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #1f2937;
+    font-size: 24px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 250ms ease-in-out;
+}
+
+.end-screen.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.end-screen > .end-message {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.end-screen > .restart {
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
 /* * {
     border: 1px solid red;
 } */
