@@ -27,7 +27,7 @@ function getComputerChoice () {
     const randomIndex = Math.floor(Math.random() * keys.length);
 
     // Log the computer's choice
-    console.log(keys[randomIndex])
+    //console.log(keys[randomIndex])
 
     // Return the key at the random index
     return keys[randomIndex]; 
@@ -45,11 +45,13 @@ function playRound (playerSelection, computerSelection) {
 
     // Check the dict to see who won, key value pair where key beats value
     if (winDecide[playerSelection] === computerSelection) {
-        roundWinner = 'player'
+        roundWinner = 'player';
+        playerScore++;
     } else if (winDecide[computerSelection] === playerSelection) {
-        roundWinner = 'computer'
+        roundWinner = 'computer';
+        computerScore++;
     } else {
-        roundWinner = 'tie'
+        roundWinner = 'tie';
     }
 
     updateRoundResultDesc(roundWinner, playerSelection, computerSelection)
@@ -69,22 +71,42 @@ const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
 
-rockButton.addEventListener('click', () => handleClick('Rock'));
-paperButton.addEventListener('click', () => handleClick('Paper'));
-scissorsButton.addEventListener('click', () => handleClick('Scissors'));
+// OLD, tedious way of listening to events
+// rockButton.addEventListener('click', () => handleClick('Rock'));
+// paperButton.addEventListener('click', () => handleClick('Paper'));
+// scissorsButton.addEventListener('click', () => handleClick('Scissors'));
 
-function handleClick(playerSelection){
-    if (isGameOver()) {
-        //end game
-        return
-    }
 
-    const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
-    updateChoices(playerSelection, computerSelection);
-    updateRoundResult();
+const rpsOptions = document.querySelectorAll('.square-button');
 
-}
+rpsOptions.forEach((button) => {
+    button.addEventListener('click', () => {     
+        playerSelection = getKeyByValue(rpsEmoji, button.textContent);
+        console.log(playerSelection);
+        const computerSelection = getComputerChoice();
+        playRound(playerSelection, computerSelection);
+        updateChoices(playerSelection, computerSelection);
+        updateRoundResult();
+
+        if (isGameOver()){
+            openEndScreen();
+        }
+    })
+})
+
+// OLD way to handle click
+// function handleClick(playerSelection){
+//     if (isGameOver()) {
+//         //end game
+//         return
+//     }
+
+//     const computerSelection = getComputerChoice();
+//     playRound(playerSelection, computerSelection);
+//     updateChoices(playerSelection, computerSelection);
+//     updateRoundResult();
+
+// }
 
 function updateChoices(playerSelection, computerSelection){
     playerChoice.textContent = rpsEmoji[playerSelection];
@@ -115,6 +137,20 @@ function updateRoundResultDesc(roundWinner, playerSelection, computerSelection) 
     return 
 }
 
+
+function openEndScreen(){
+
+}
+
 function restartGame() {
     
+}
+
+function getKeyByValue(object, value) {
+    for (let prop in object) {
+        if (object.hasOwnProperty(prop)) {
+            if (object[prop] === value)
+            return prop;
+        }
+    }
 }
