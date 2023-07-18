@@ -84,7 +84,8 @@ function handleClick(playerSelection){
 }
 
 function updateChoices(playerSelection, computerSelection){
-
+    playerChoice.textContent = rpsEmoji[playerSelection];
+    computerChoice.textContent = rpsEmoji[computerSelection];
 }
 
 function updateScore() {
