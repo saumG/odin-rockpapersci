@@ -95,6 +95,11 @@ rpsOptions.forEach((button) => {
 
         if (isGameOver()){
             openEndScreen();
+            setFinalMessage();
+            restartButton.addEventListener('click', () => {
+                restartGame();
+                closeEndScreen();
+            })
         }
     })
 })
@@ -144,7 +149,19 @@ function updateRoundResultDesc(roundWinner, playerSelection, computerSelection) 
 
 
 function openEndScreen(){
+    endScreen.classList.add('active');
+    overlay.classList.add('active');
+}
 
+function closeEndScreen() {
+    endScreen.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+function setFinalMessage(){
+    return playerScore > computerScore
+    ? (endMessage.textContent = 'You won!')
+    : (endMessage.textContent = 'You lost...');
 }
 
 function restartGame() {
@@ -155,6 +172,8 @@ function restartGame() {
     updateRoundResult(); // updates scores to 0-0
     playerChoice.textContent = "?";
     computerChoice.textContent = "?";
+    endScreen.classList.remove('active');
+    overlay.classList.remove('active');
     
 }
 
