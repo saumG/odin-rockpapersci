@@ -160,8 +160,8 @@ function closeEndScreen() {
 
 function setFinalMessage(){
     return playerScore > computerScore
-    ? (endMessage.textContent = 'You won!')
-    : (endMessage.textContent = 'You lost...');
+    ? (endMessage.textContent = 'You sent the aliens back to their planet!!!')
+    : (endMessage.textContent = 'The aliens used you as a test subject!!!');
 }
 
 function restartGame() {

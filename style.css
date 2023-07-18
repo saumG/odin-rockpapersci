@@ -46,7 +46,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 12px;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 700;
 }
 
@@ -63,9 +63,9 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 72px;
-    height: 120px;
-    width: 120px;
-    border-radius: 18px;
+    height: 150px;
+    width: 150px;
+    border-radius: 24px;
     background-color: #546e89;
     cursor: pointer;
 }
@@ -76,12 +76,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 12px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
 }
 
 .round-results {
-    font-size: 18px;
+    font-size: 28px;
     font-weight: 700;
 }
 
@@ -97,8 +97,8 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 72px;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 }
 
 .scores > .player,
@@ -109,11 +109,12 @@ body {
     justify-content: center;
     gap: 6px;
     margin: 12px;
-    width: 120px;
+    width: 170px;
+    height: 170px;
 }
 
 .score {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 900;
     display: flex;
     gap: 4px;
@@ -149,7 +150,7 @@ body {
     left: 50%;
     width: 250px;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 24px;
     text-align: center;
     background-color: #1f2937;
     font-size: 24px;
@@ -163,14 +164,20 @@ body {
 }
 
 .end-screen > .end-message {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
+    color: rgb(250,198,80);
 }
 
 .end-screen > .restart {
     padding: 10px 20px;
     margin-top: 25px;
     margin-bottom: 15px;
+    background-color: #546e89;
+    color: rgb(250,198,80);
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 18px;
 }
 
 .overlay {
@@ -181,13 +188,13 @@ body {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .overlay.active {
     display: block;
 }
 
-/* * {
+* {
     border: 1px solid red;
-} */
+}
