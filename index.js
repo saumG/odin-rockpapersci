@@ -60,8 +60,16 @@ const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
 
+rockButton.addEventListener('click', () => handleClick('Rock'));
+paperButton.addEventListener('click', () => handleClick('Paper'));
+scissorsButton.addEventListener('click', () => handleClick('Scissors'));
 
 function handleClick(playerSelection){
+    if (isGameOver()) {
+        //end game
+        return
+    }
+
 
 }
 
